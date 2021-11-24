@@ -5,11 +5,13 @@ export default function Form(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const resp = await fetch(`https://api.github.com/users/${userName}`);
-    const user = await resp.json();
-    props.onSubmit(user);
+    const resp = await (
+      await fetch(`https://api.github.com/users/${userName}`)
+    ).json();
+    // const user = await resp.json();
+    props.onSubmit(resp);
     setUserName("");
-    console.log(user);
+    console.log(resp);
   };
 
   return (

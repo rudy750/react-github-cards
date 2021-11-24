@@ -7,6 +7,7 @@
 .github-profile .info {
   display: inline-block;
   margin-left: 12px;
+  vertical-align: "top";
 }
 .github-profile .info .name {
   font-size: 1.25rem;
